@@ -31,7 +31,7 @@ jobs:
               id: create_release
               uses: actions/create-release@v1
               env:
-                  GITHUB_TOKEN: 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
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   tag_name: "${{ steps.get_version.outputs.VERSION }}"
                   release_name: "app ${{ steps.get_version.outputs.VERSION }}"
