@@ -223,9 +223,9 @@ function userChange(valList) {
                 <template #extra>
                     <div>进入商品页面，http请求头里的cookie</div>
                 </template>
-                <div :style="{ width: inputWidth + 'px' }">
+                <div style="width: 100%;">
                     <!-- <div style="width: 400px"> -->
-                    <a-textarea
+                    <a-textarea style="width: 100%;"
                         v-model="form.cookie"
                         placeholder="请输入 cookie"
                         allow-clear
@@ -234,8 +234,8 @@ function userChange(valList) {
             </a-form-item>
 
             <a-form-item field="url" label="url">
-                <div :style="{ width: inputWidth + 'px' }">
-                    <a-input
+                <div style="width: 100%;">
+                    <a-input style="width: 100%;"
                         v-model="form.url"
                         placeholder="请输入商品详情页url"
                     />
@@ -246,8 +246,8 @@ function userChange(valList) {
                 <template #extra>
                     <div>进入商品页面，页面路径上的 itemId</div>
                 </template>
-                <div :style="{ width: inputWidth + 'px' }">
-                    <a-input
+                <div style="width: 100%;">
+                    <a-input style="width: 100%;"
                         v-model="form.itemId"
                         placeholder="请输入itemId..."
                     />
@@ -258,7 +258,7 @@ function userChange(valList) {
                 <template #extra>
                     <div>需要与选择实名信息一致</div>
                 </template>
-                <div :style="{ width: inputWidth + 'px' }">
+                <div style="width: 100%;">
                     <a-input-number
                         v-model="form.num"
                         placeholder="请输入购买数量..."
@@ -268,7 +268,7 @@ function userChange(valList) {
                 </div>
             </a-form-item>
             <a-form-item field="selectVisitUserList" label="观演人" required>
-                <a-checkbox-group
+                <a-checkbox-group 
                     v-model="form.selectVisitUserList"
                     @change="userChange"
                 >
@@ -281,7 +281,7 @@ function userChange(valList) {
                         {{ item.maskedIdentityNo }} -->
 
                         <template #checkbox="{ checked }">
-                            <a-space
+                            <a-space style="margin:2px;"
                                 align="start"
                                 class="custom-checkbox-card"
                                 :class="{
@@ -306,19 +306,21 @@ function userChange(valList) {
                     </a-checkbox>
                 </a-checkbox-group>
 
-                <a-button
-                    size="mini"
-                    @click="setLoading"
-                    type="primary"
-                    :loading="isLoading"
-                    >更新</a-button
-                >
+                
             </a-form-item>
+			
+			<a-button style="width: 30%;margin: 0 auto;margin-bottom: 20px;"
+			    size="mini"
+			    @click="setLoading"
+			    type="primary"
+			    :loading="isLoading"
+			    >点击更新观演人员</a-button
+			>
             <a-form-item field="retry" label="重试次数" required>
                 <template #extra>
                     <div>下订单失败的重试次数，最大可设置{{ retryMax }}</div>
                 </template>
-                <div :style="{ width: inputWidth + 'px' }">
+                <div style="width: 100%;">
                     <a-input-number
                         v-model="form.retry"
                         placeholder="请输入重试次数"
@@ -327,7 +329,7 @@ function userChange(valList) {
                 </div>
             </a-form-item>
 
-            <a-form-item
+            <!-- <a-form-item
                 :validate-status="proxyStatus"
                 feedback
                 field="isUseProxy"
@@ -345,9 +347,9 @@ function userChange(valList) {
                         placeholder="请先设置代理"
                     ></a-input>
 
-                    <!-- <a-button type="primary" @click="checkProxy">验证</a-button> -->
+                    <a-button type="primary" @click="checkProxy">验证</a-button> 
                 </div>
-            </a-form-item>
+            </a-form-item> -->
 
             <a-form-item required label="间隔时间ms">
                 <template #extra>
@@ -356,13 +358,13 @@ function userChange(valList) {
                         = 1s
                     </div>
                 </template>
-                <div :style="{ width: inputWidth + 'px' }">
+                <div style="width: 100%;">
                     <a-input-number v-model="form.interval"></a-input-number>
                 </div>
             </a-form-item>
 
             <a-form-item>
-                <a-button type="primary" html-type="submit">确定</a-button>
+                <a-button type="primary" html-type="submit" style="width: 100%;">确定</a-button>
             </a-form-item>
         </a-form>
     </section>

@@ -405,7 +405,7 @@ async function injectCloseTip() {
 
                     <a-button
                         v-if="isPreSell"
-                        style="margin-bottom: 10px"
+                        style="margin-bottom: 10px;width: 100%;"
                         type="primary"
                         status="success"
                         @click="rob"
@@ -415,7 +415,7 @@ async function injectCloseTip() {
                     >
                     <a-button
                         v-else
-                        style="margin-bottom: 10px"
+                        style="margin-bottom: 10px;width: 100%;"
                         type="primary"
                         status="normal"
                         @click="buy"

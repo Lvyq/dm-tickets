@@ -38,7 +38,7 @@ onMounted(async () => {
     initSetting();
 
     // 每次启动app，检查版本号
-    checkVersion();
+    //checkVersion();
 });
 
 const updateRef = ref(null);
@@ -176,7 +176,7 @@ async function getLastFun() {
 
 <template>
     <div class="app-container">
-        <div class="nav-wrap">
+       <!-- <div class="nav-wrap">
             <a-menu
                 :default-selected-keys="['dm']"
                 :style="{ width: '200px', height: '100%' }"
@@ -197,14 +197,14 @@ async function getLastFun() {
             <div class="setting-btn" @click="setting">
                 <icon-settings style="font-size: 35px" />
             </div>
-        </div>
+        </div> -->
 
         <div class="right">
-            <Header></Header>
-            <Tip
+           <!-- <Header></Header> -->
+            <!-- <Tip
                 style="margin-bottom: 5px"
                 :text="`本软件目的是为了学习交流，严禁用于商业用途。该软件已在 Github 上开源，任何用于商业用途产生的后果与作者无关`"
-            />
+            /> -->
             <router-view></router-view>
         </div>
 
