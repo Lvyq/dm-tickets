@@ -7,7 +7,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "大麦抢票工具",
+    "productName": "DmTickets",
     "version": "../package.json"
   },
   "tauri": {
