@@ -12,7 +12,7 @@ import {
 
 
 onMounted(() => {
-    initVisitUser()
+    //initVisitUser()
 })
 
 const store = useStore();
